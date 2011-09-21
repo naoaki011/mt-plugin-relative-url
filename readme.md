@@ -5,19 +5,19 @@ The built-in URL tags, such as MTEntryPermalink or MTArchiveLink create canonica
 
 `MTRelativeURLVersion`
 
-Return the version number of the MTRelativeURL plugin.
++ Return the version number of the MTRelativeURL plugin.
 
 `MTRelativeURLBase`
 
-Container tag that let's you specify the URL of the current document. This allows the other MTRelativeURL tags to create URLs that are relative to this page. If no MTRelativeURLBase is specified, URLs will be created relative to the blog server.
-For example, in an archive template, you should specify the URL of the current document like so:
++ Container tag that let's you specify the URL of the current document. This allows the other MTRelativeURL tags to create URLs that are relative to this page. If no MTRelativeURLBase is specified, URLs will be created relative to the blog server.
++ For example, in an archive template, you should specify the URL of the current document like so:
 
     <MTRelativeURLBase><$MTArchiveLink$></MTRelativeURLBase>
 
 `MTRelativeURL`
 
-Container tag that converts its contents into a relative URL, if possible. The URL will be relative to MTRelativeURLBase, if specified. Otherwise it will be relative to the blog server (i.e. it will begin with "/").
-For example, in an index template, you could have relative links to individual entries like so:
++ Container tag that converts its contents into a relative URL, if possible. The URL will be relative to MTRelativeURLBase, if specified. Otherwise it will be relative to the blog server (i.e. it will begin with "/").
++ For example, in an index template, you could have relative links to individual entries like so:
 
     <MTEntries>
         <a href="<MTRelativeURL><MTEntryPermalink></MTRelativeURL>"><MTEntryTitle></a>
@@ -26,8 +26,8 @@ For example, in an index template, you could have relative links to individual e
 
 `relative_url="1"`
 
-The relative_url attribute converts the contents of a URL tag to a relative path, similar to the MTRelativeURL tag.
-The same example as before, using this filter would look like so:
++ The relative_url attribute converts the contents of a URL tag to a relative path, similar to the MTRelativeURL tag.
++ The same example as before, using this filter would look like so:
 
     <MTEntries>
         <a href="<MTEntryPermalink relative_url="1">"><MTEntryTitle></a>
