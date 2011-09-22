@@ -6,8 +6,8 @@ use MT::Template::Context;
 
 sub _relative_url_version {
     my ( $ctx, $args ) = @_;
-    my $version = '1.0.1';
-    return $version;
+    my $plugin = MT->component("RelativeURL");
+    return $plugin->version;
 }
 
 sub _relative_url_base {
